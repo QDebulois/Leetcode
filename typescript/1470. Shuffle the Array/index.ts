@@ -1,9 +1,8 @@
 function shuffle(nums: number[], n: number): number[] {
-  let res: number[] = []
-  const y: number[] = nums.splice(n)
-  for (let i = 0; i < nums.length; i++) {
+  const res: number[] = []
+  for (let i = 0; i < n; i++) {
     res.push(nums[i])
-    res.push(y[i])
+    res.push(nums[n + i])
   }
   return res
-};
+}
